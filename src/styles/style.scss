@@ -1,5 +1,5 @@
 @import "normalize";
-
+@import "common/null.scss";
 
 @import "common/mixins";
 @import "common/variables";
@@ -8,6 +8,8 @@
 @import "common/footer.scss";
 @import "common/header.scss";
 @import "common/slick.scss";
+
+@import "content/content.scss";
 
 
 
@@ -31,16 +33,13 @@
 
 
 .container {
-  // outline: 1px solid #4164ff;
-  max-width: 88%; 
-  margin: 0% 0% 0% 12%;    
-}
-.container-jil{
-  max-width: 91.66666%;
+  outline: 2px solid #4164ff;
+  // max-width: 1150; 
+  max-width: 79.2%;  
   margin: 0 auto;
-   outline: 1px solid #4164ff;
+ 
+}
 
-} 
 .ibg {
   background-repeat: no-repeat;
   background-size: cover;  
@@ -59,8 +58,8 @@
 
 a {
   // @include center(); 
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%; 
   text-decoration: none !important;  
   &:hover {
     cursor: pointer;
@@ -90,7 +89,6 @@ a {
   height: 30px;
 }
 .active{
-  opacity: 1;
 visibility: visible;
 display: flex;  
  }
@@ -100,8 +98,9 @@ z-index: 2000;
 opacity: 0.5; 
 position: absolute;
 background-color: red;
-z-index: 500;
+z-index: -500;
 width: 100%;
 height: 100%;
-padding: 0;margin: 0;
+left: 0%;
+top: 0;
 }

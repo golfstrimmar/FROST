@@ -1,0 +1,602 @@
+@import "common/mixins";
+@import "common/variables";
+@import "common/fonts";
+
+
+// ====================================================
+//                  slider-top
+// ====================================================
+.container-top {
+  max-width: 100vw;
+  margin: 0px auto;
+  @media screen and (max-width: 960px) {
+    max-width: 100vw;
+  }
+}
+.slider-top {
+  width: 100%;
+  height: 100%;
+
+  &__body {
+    @include jucs();
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 80px 0px 0px ;
+  }
+  
+
+  
+  &__slide {
+    max-width: 100%;
+  }
+
+  &__slides {
+    width: 100%;
+    height: 100%;
+    padding: 0% 0% 0% 0%;
+    position: relative;
+    overflow: hidden;
+  }
+  &__plaza {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.slick-slide {
+  flex: 0 1 100%;
+}
+
+// ===========================================
+.slider-top-tiny {
+  width: 100%;
+  height: 100%;
+  &__body {
+    position: relative;
+    text-align: left;
+    @include flex();
+    width: 100%;
+    padding: 0% 0% 30% 0%;
+  }
+
+  &__bg {
+    position: absolute;
+    background-color: linear-gradient(
+      360deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(-180deg);
+    z-index: 5000;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.arrows-slider-top {
+  flex: 0 1 100%;
+  @include juca();
+
+  &__arrow {
+    position: relative;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    border-radius: 50%;
+    background: transparent;
+    @include anim(0.2s);
+
+    &:hover {
+      background: $color1;
+    }
+    img {
+      position: absolute;
+      z-index: 500;
+      width: 30%;
+      height: 50%;
+      top: 50%;
+      transform: translate(90%, -50%);
+    }
+    &_prev {
+      left: 30px;
+    }
+
+    &_next {
+      right: 30px;
+      img {
+        transform: (translate(120%, -50%) rotate(180deg));
+      }
+    }
+  }
+}
+
+.slick-dots {
+  padding-inline-start: 0px !important;
+  position: absolute;
+  width: 100%;
+  top: 80%;
+  left: 0px;
+  @include jucc();
+  z-index: 2;
+}
+
+.slick-dots li button {
+  list-style: none;
+  margin: 0px 10px 0px 10px;
+  background: $color2;
+  color: transparent;
+  text-align: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.slick-dots li.slick-active {
+  position: relative;
+  button {
+    background: transparent;
+    border: 2px solid $color2;
+  }
+}
+
+// ----------------------------------------
+
+.slider-top-plaza {
+  position: absolute;
+  z-index: 5;
+  height: 60px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  @include center(); 
+}
+
+.link-1 {
+min-width: 60%;
+  &__body {
+    height: 100%;
+    @include flex();
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+       
+    
+  }
+}
+
+.form-link-1 {
+  @include jucb();
+  @include alic();
+  width: 100%;
+  height: 100%;
+  &_input {
+    flex: 0 1 100%;
+    &:hover > span {
+      background-color: #fff;
+    }
+    input {
+      text-align: left;
+      width: 100%;
+      height: 100%;
+      text-indent: 20px;
+      padding: 20px 10px 20px 10px;
+      @media screen and (max-width:  1240px) {
+        padding: 10px 10px 10px 10px;
+         } 
+      @include anim(0.2s);
+      border: 1px solid #e3e3e3;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 60px;
+      @include Text-Style-2;
+      &:hover {
+        background-color: #d4b584;
+      }
+    }
+  }
+}
+
+// ----------------content-main---------------------------------------------
+.content-main {
+  position: relative;
+  z-index: 4;
+  
+ 
+//-------- popular--------
+
+  .popular {
+    &__body {
+      position: relative;
+      @include jucc();
+      width: 100%;
+      height: 100%;
+      padding: 5% 0% 0% 0%;
+    }
+
+    &__link-all {
+      font-family: Geometria;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 130%;
+      text-align: right;
+      color: #c39d6b;
+        @media screen and (max-width:  750px) {
+     
+padding: 2% 0% 0% 0%;  
+        } 
+    }
+
+    //  --------ширина шапки--------
+    &__head {
+      position: relative;
+      flex: 0 1 100%;
+    }
+    // ----------ширина контента-----
+    &__content {
+      position: relative;
+      flex: 0 1 100%;
+    }
+  }
+  // ----------------шапка блока---------------------
+  .popular-head {
+    &__title {
+      position: relative;
+      text-transform: uppercase;
+      flex: 0 1 100%;
+      @include Text-Style-3;
+      @include jucb();
+      @include alie();
+     @media screen and (max-width:  750px) {
+       font-size: 24px; 
+       @include fdc();
+       @include alic();
+padding: 5% 0% 3% 0%;  
+        } 
+    }
+  }
+  // ---------управление единичными блоками---------------------
+  .content-popular {
+    &__body {
+      position: relative;
+      @include jucb();
+      padding: 3% 0% 0% 0%;
+       @media screen and (max-width:  750px) { 
+@include jucc(); 
+        } 
+    }
+    // ----ширина единичного блока-----
+    &__item {
+      flex: 0 1 22%;
+      padding: 0% 0% 0% 0%;
+      @media screen and (max-width:  1100px) { 
+margin: 3% 10% ;
+        } 
+      @media screen and (max-width:  750px) { 
+margin: 3% 20% ;
+flex: 0 1 40%; 
+        } 
+    }
+  }
+  // =====единичный блок=========
+  .tiny-popular {
+    width: 100%;
+    height: 100%;
+    &__body {
+      position: relative;
+      @include jucc();
+      text-align: left;
+      width: 100%;
+      height: 100%;
+
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+    }
+    &__bg {
+      width: 100%;
+      position: relative;
+      padding: 0% 0% 72% 0%;
+    }
+
+    &__icon {
+      position: absolute;
+      z-index: 5;
+      width: 30px;
+      height: 30px;
+      top: 2%;
+      left: 80%;
+    }
+    &__title {
+      position: relative;
+      z-index: 2;
+      font-family: Geometria;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 18px;
+      color: #30261d;
+      flex: 0 1 100%;
+      padding: 10px 20px 0px 20px;
+    }
+    &__text {
+      &_one {
+        flex: 0 1 100%;
+        padding: 10px 20px 0px 20px;
+        font-family: Geometria;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 130%;
+        color: #816040;
+      }
+      &_two {
+        flex: 0 1 100%;
+        padding: 10px 20px 0px 20px;
+        font-family: Geometria;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 25px;
+        color: #30261d;
+      }
+    }
+    &__button {
+      position: relative;
+      z-index: 2;
+      flex: 0 1 100%;
+      a {
+        @include jucs();
+        &:hover {
+          span {
+            color: indianred;
+          }
+        }
+      }
+      span {
+        @include anim(0.2s);
+        position: relative;
+        position: absolute;
+        z-index: 5;
+        width: 30px;
+        height: 30px;
+        top: 0%;
+        left: 80%;
+        background: #f3d6b0;
+        border-radius: 6px;
+        transform: translate(0%, -150%);
+        &:after,
+        &:before {
+          content: "";
+          background-color: $color4;
+          position: absolute;
+          width: 2px;
+          height: 15px;
+          z-index: 2;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          @include anim(0.2s);
+        }
+        &:before {
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+        &:hover {
+          &:after,
+          &:before {
+            background-color: $color2;
+          }
+        }
+      }
+    }
+  }
+
+
+// ==============create========================
+
+.create {
+  &__body {
+    position: relative;
+    @include jucc();
+    width: 100%;
+    height: 100%;
+  }
+
+  // ----------ширина контента-----
+  &__content {
+    position: relative;
+    flex: 0 1 100%;
+  }
+}
+// ----------------шапка блока---------------------
+.create-head {
+  width: 100%;
+  height: 100%;
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    line-height: 1;
+    text-transform: uppercase;
+    flex: 0 1 100%;
+    padding: 5% 0% 2% 0%;
+    @include Text-Style-3;
+    text-align: center;
+    @media screen and (max-width:  750px) {
+      font-size: 24px; 
+       } 
+  }
+}
+// ---------управление единичными блоками---------------------
+.content-create {
+  &__body {
+    position: relative;
+    @include jucc();
+  }
+  // ----ширина единичного блока-----
+  &__item {
+    flex: 0 1 48%;
+    @media screen and (max-width:  750px) { flex: 0 1 100%;  } 
+  }
+}
+// =====единичный блок=========
+.tiny-create {
+  width: 100%;
+  height: 100%;
+  &__body {
+    position: relative;
+    @include jucc();
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: 0px 2px -6px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+  }
+  .tiny-create__bg {
+   width: 100%;
+   height: 100%;
+     
+  }
+  &__title {
+    position: relative;
+    z-index: 2;
+    line-height: 1;
+    flex: 0 1 100%;
+    padding: 5% 19% 0% 19%;
+    font-family: Geometria;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 125%;
+    display: flex;
+    text-align: center;
+    color: #30261d;
+  }
+
+  &__plaha {
+    @include jucs();
+    height: 50px;
+    flex: 0 1 97.5%;
+    background: linear-gradient(
+      360deg,
+      rgba(24, 24, 24, 0.6) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0.2;
+    position: relative;
+    z-index: 6;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+}
+
+// =======================================================
+// =======================================================
+//                  teamower                           
+// =======================================================
+.teamower{ 
+  &__body{
+     position: relative;
+     @include jucc();
+     width: 100%;
+     height: 100%;
+      padding: 3% 0% 3% 0%;  
+  }
+//  --------ширина шапки--------
+ 
+// ----------ширина контента-----
+  &__content {  
+position: relative;
+flex: 0 1 100%;
+padding: 3% 0% 0% 0%;
+}
+  }
+// ----------------шапка блока---------------------
+.teamower-head{
+
+  &__title {
+    @include Text-Style-3;
+    flex: 0 1 100%;
+    padding: 0% 0% 0% 0%; 
+  }
+
+  
+}
+// ---------управление единичными блоками---------------------
+.content-teamower{
+  &__body {  
+position: relative;
+@include jucb();
+@media screen and (max-width:  1200px) { 
+  @include jucc();
+  } 
+}
+
+&__item {  
+flex: 0 1 12%;
+
+@media screen and (max-width:  1200px) { 
+  margin: 0% 10% 3% 10%; 
+  } 
+}
+}
+// =====единичный блок=========
+.tiny-teamower {
+  width: 100%;
+  height: 100%;
+  &__body {
+    position: relative;
+    @include jucc(); 
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+border-radius: 6px;
+  }
+ &__bg{
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0% 0% 96% 0%;
+}
+  &__title {
+    position: relative;
+    z-index: 2; 
+    flex: 0 1 100%;
+    padding: 7% 0% 0% 0%;
+    @include Text-Style-6;
+  }
+  &__text {
+      position: relative;
+    z-index: 2;  
+    flex: 0 1 100%;
+      padding: 5% 0% 0% 0%;
+  @include Text-Style-5;
+  
+  }
+  &__button1 { 
+   .tiny-create__button{
+     width: 140px;
+height: 30px; 
+margin: 15% 0% 0% 0%;  
+   }
+  }
+  &__button2 { 
+  .tiny-create__button-dark{
+     width: 140px;
+height: 30px;
+margin: 6% 0% 10% 0%; 
+   }
+  } 
+}
+
+// =======================================================
+//   end of   teamower                           
+// =======================================================
+
+
+}

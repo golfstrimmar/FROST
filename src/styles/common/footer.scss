@@ -2,3 +2,77 @@
 @import "common/variables";
 @import "common/fonts";
 
+// =======================================================
+//                  block-trips                           
+// =======================================================
+.footer{ 
+  &__body{
+     position: relative;
+     @include jucc();
+     width: 100%;
+     height: 100%;
+      padding: 5% 0% 5% 0%; 
+      background: rgba(243, 214, 176, 0.5); 
+  }
+
+
+  }
+
+.content-footer{
+  &__body {  
+position: relative;
+@include jucb();
+width: 100%;
+height: 100%;
+@media screen and (max-width:  750px) { 
+  @include fdc();
+  } 
+}
+// ----ширина единичного блока-----
+&__item {  
+flex: 0 1 33%; 
+
+}
+}
+// =====единичный блок=========
+.tiny-footer {
+  width: 100%;
+  height: 100%;
+  &__body {
+    position: relative;
+    @include jucc(); 
+    text-align: left;
+    width: 100%;
+    height: 100%;
+  
+  }
+  &__icon {
+  
+    text-align: left;
+    flex: 0 1 100%;
+   @include jucc();
+       @media screen and (max-width:  750px) { text-align: center;  } 
+  }
+  &__title {
+  
+   @include Text-Style-7;
+    flex: 0 1 100%; 
+    padding: 8% 0% 0% 0%;
+    &:nth-child(1){ padding: 0% 0% 0% 0%; } 
+     @media screen and (max-width:  750px) { text-align: center;  }  
+    
+  }
+  &__text {
+  
+     @include Text-Style-8;
+      text-align: start;
+     flex: 0 1 100%;
+      padding: 2% 0% 0% 0%;
+      @media screen and (max-width:  750px) { text-align: center;  } 
+    }
+ 
+}
+
+// =======================================================
+//               end of   block-trips                           
+// =======================================================
